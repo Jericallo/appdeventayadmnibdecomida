@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/categoria_fondo"
+
+    tools:context=".ui.activity.AgregarCategoriaAdmin">
+
+    <!-- App Logo -->
+    <ImageView
+        android:id="@+id/logoImageAdmin"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:src="@drawable/portada"
+        android:layout_marginTop="150dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <!-- Title -->
+    <TextView
+        android:id="@+id/tvTitleAdminCategoria"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="Registro de Categoria"
+        android:textSize="24sp"
+        android:textColor="#FF0000"
+        android:background="@drawable/rounded_edittext"
+        android:textStyle="bold"
+        app:layout_constraintTop_toBottomOf="@id/logoImageAdmin"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <!-- Name Field -->
+    <EditText
+        android:id="@+id/etNameAdminCategoria"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginHorizontal="30dp"
+        android:hint="Nombre Categoria"
+        android:padding="10dp"
+        android:background="@drawable/rounded_edittext"
+        android:textColor="#000000"
+        android:inputType="textPersonName"
+        app:layout_constraintTop_toBottomOf="@id/tvTitleAdminCategoria"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <!-- Email Field -->
+    <EditText
+        android:id="@+id/etDescripcionAdmin"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginHorizontal="30dp"
+        android:hint="Descripcion"
+        android:padding="10dp"
+        android:background="@drawable/rounded_edittext"
+        android:textColor="#000000"
+        app:layout_constraintTop_toBottomOf="@id/etNameAdminCategoria"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <!-- TextView para Link foto -->
+    <EditText
+        android:id="@+id/tvLinkFotoAdminCategoria"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:layout_marginHorizontal="30dp"
+        android:hint="link foto"
+        android:padding="10dp"
+
+        android:background="@drawable/rounded_edittext"
+        android:textColor="#000000"
+        app:layout_constraintTop_toBottomOf="@id/etDescripcionAdmin"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+
+
+    <!-- Register Button -->
+    <Button
+        android:id="@+id/btnRegisterAdminCategoria"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginHorizontal="30dp"
+        android:text="Registrarse"
+        android:backgroundTint="#FF5722"
+        android:textColor="#FFFFFF"
+        android:textStyle="bold"
+        app:layout_constraintTop_toBottomOf="@id/tvLinkFotoAdminCategoria"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <!-- Error Message -->
+    <TextView
+        android:id="@+id/tvErrorAdminCategoria"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginHorizontal="30dp"
+        android:background="@drawable/error_background"
+        android:padding="12dp"
+        android:text="Credenciales inválidas, por favor intenta nuevamente."
+        android:textSize="14sp"
+        android:textColor="@color/white"
+        android:gravity="center"
+        android:visibility="gone"
+        app:layout_constraintTop_toBottomOf="@id/btnRegisterAdminCategoria"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <!-- Retry Button -->
+    <Button
+
+
+
+        android:id="@+id/btnNuevoIntentoAdminCategoria"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginHorizontal="30dp"
+        android:text="@string/intentardenuevo"
+        android:textStyle="bold"
+        android:backgroundTint="@color/primary"
+        android:textColor="@color/white"
+        android:visibility="invisible"
+        android:layout_below="@id/tvErrorAdminCategoria"
+
+        app:layout_constraintTop_toBottomOf="@id/tvErrorAdminCategoria"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>

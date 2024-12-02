@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@drawable/food_background"
+    tools:context=".ui.fragments.RegistrarFragment">
+
+    <!-- App Logo -->
+    <ImageView
+        android:id="@+id/logoImage"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:src="@drawable/portada"
+        android:layout_marginTop="40dp"
+        android:layout_centerHorizontal="true" />
+
+    <!-- Title -->
+    <TextView
+        android:id="@+id/tvTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/logoImage"
+        android:layout_marginTop="20dp"
+        android:text="Registro de Usuario"
+        android:textSize="24sp"
+        android:background="@drawable/rounded_edittext"
+
+        android:textColor="#000000"
+        android:textStyle="bold"
+        android:layout_centerHorizontal="true" />
+
+    <!-- Name Field -->
+    <EditText
+        android:id="@+id/etName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tvTitle"
+        android:layout_marginTop="20dp"
+        android:layout_marginHorizontal="30dp"
+        android:hint="Nombre completo"
+        android:padding="10dp"
+        android:background="@drawable/rounded_edittext"
+        android:textColor="#000000"
+        android:inputType="textPersonName" />
+
+    <!-- Email Field -->
+    <EditText
+        android:id="@+id/etEmail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/etName"
+        android:layout_marginTop="10dp"
+        android:layout_marginHorizontal="30dp"
+        android:hint="Correo electrónico"
+        android:padding="10dp"
+        android:background="@drawable/rounded_edittext"
+        android:textColor="#000000"
+        android:inputType="textEmailAddress" />
+
+    <!-- TextView para Link foto -->
+    <EditText
+        android:id="@+id/tvLinkFoto"
+        android:background="@drawable/rounded_edittext"
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/etEmail"
+        android:layout_marginTop="5dp"
+        android:layout_marginHorizontal="30dp"
+        android:hint="link foto"
+        android:padding="10dp"
+        android:textColor="#000000"
+        />
+
+    <!-- Password Field -->
+    <EditText
+        android:id="@+id/etPassword"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tvLinkFoto"
+        android:layout_marginTop="10dp"
+        android:layout_marginHorizontal="30dp"
+        android:hint="Contraseña"
+        android:padding="10dp"
+        android:background="@drawable/rounded_edittext"
+        android:textColor="#000000"
+        android:inputType="textPassword" />
+    <!-- Password Field -->
+    <EditText
+        android:id="@+id/etPasswordConfirmar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/etPassword"
+        android:layout_marginTop="10dp"
+        android:layout_marginHorizontal="30dp"
+        android:hint="Confirmar Contraseña"
+        android:padding="10dp"
+        android:background="@drawable/rounded_edittext"
+        android:textColor="#000000"
+        android:inputType="textPassword" />
+
+    <!-- Register Button -->
+    <Button
+        android:id="@+id/btnRegister"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/etPasswordConfirmar"
+        android:layout_marginTop="20dp"
+        android:layout_marginHorizontal="30dp"
+        android:text="Registrarse"
+        android:backgroundTint="#FF5722"
+        android:textColor="#FFFFFF"
+        android:textStyle="bold" />
+
+    <Button
+        android:id="@+id/btnAlreadyHaveAccount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/btnRegister"
+        android:layout_marginTop="20dp"
+        android:text="¿Ya tienes una cuenta? Inicia sesión"
+        android:textColor="#FFFFFF"
+        android:textSize="16sp"
+        android:layout_centerHorizontal="true"
+        android:background="?attr/selectableItemBackground" />
+    <!-- Error Message -->
+    <TextView
+        android:id="@+id/tvError2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/btnRegister"
+        android:layout_marginTop="10dp"
+        android:layout_marginHorizontal="30dp"
+        android:background="@drawable/error_background"
+        android:padding="12dp"
+        android:text="Credenciales inválidas, por favor intenta nuevamente."
+        android:textSize="14sp"
+        android:textColor="@color/white"
+        android:gravity="center"
+        android:visibility="gone" />
+
+    <!-- Retry Button -->
+    <Button
+        android:id="@+id/btnNuevoIntento2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tvError2"
+        android:layout_marginTop="10dp"
+        android:layout_marginHorizontal="30dp"
+        android:text="@string/intentardenuevo"
+        android:textStyle="bold"
+        android:backgroundTint="@color/primary"
+        android:textColor="@color/white"
+        android:visibility="invisible" />
+
+
+</RelativeLayout>

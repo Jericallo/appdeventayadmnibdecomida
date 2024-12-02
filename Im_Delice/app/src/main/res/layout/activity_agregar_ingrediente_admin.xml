@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:app="http://schemas.android.com/apk/res-auto"
+xmlns:tools="http://schemas.android.com/tools"
+android:id="@+id/main"
+android:layout_width="match_parent"
+android:layout_height="match_parent"
+android:background="@drawable/agregar_comida"
+tools:context=".ui.activity.AgregarIngredienteAdmin">
+
+<!-- App Logo -->
+<ImageView
+    android:id="@+id/logoImageAdmin"
+    android:layout_width="120dp"
+    android:layout_height="120dp"
+    android:src="@drawable/portada"
+    android:layout_marginTop="40dp"
+    app:layout_constraintTop_toTopOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintEnd_toEndOf="parent" />
+
+<!-- Title -->
+<TextView
+    android:id="@+id/tvTitleAdminIngedinte"
+    android:layout_width="300dp"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="20dp"
+    android:text="Registro de Ingredientes"
+    android:textSize="24sp"
+    android:textColor="#FF0000"
+    android:background="@drawable/rounded_edittext"
+    android:textStyle="bold"
+    app:layout_constraintTop_toBottomOf="@id/logoImageAdmin"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintEnd_toEndOf="parent" />
+
+<!-- Name Field -->
+<EditText
+    android:id="@+id/etNameAdminIngedinte"
+    android:layout_width="0dp"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="20dp"
+    android:layout_marginHorizontal="30dp"
+    android:hint="Nombre Ingrediente"
+    android:padding="10dp"
+    android:background="@drawable/rounded_edittext"
+    android:textColor="#000000"
+    android:inputType="textPersonName"
+    app:layout_constraintTop_toBottomOf="@id/tvTitleAdminIngedinte"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintEnd_toEndOf="parent" />
+
+<!-- Email Field -->
+<EditText
+    android:id="@+id/etPrecioExtraAdmin"
+    android:layout_width="0dp"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="10dp"
+    android:layout_marginHorizontal="30dp"
+    android:hint="Precio extra"
+    android:padding="10dp"
+    android:background="@drawable/rounded_edittext"
+    android:textColor="#000000"
+    android:inputType="numberDecimal"
+    app:layout_constraintTop_toBottomOf="@id/etNameAdminIngedinte"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintEnd_toEndOf="parent" />
+
+<!-- TextView para Link foto -->
+<EditText
+    android:id="@+id/tvLinkFotoAdminIngrediente"
+
+    android:layout_width="0dp"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="10dp"
+    android:layout_marginHorizontal="30dp"
+    android:hint="link foto"
+    android:background="@drawable/rounded_edittext"
+    android:textColor="#000000"
+    app:layout_constraintTop_toBottomOf="@id/etPrecioExtraAdmin"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintEnd_toEndOf="parent" />
+
+<TextView
+    android:id="@+id/tvTitleAdminIngredienteCategoria"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="20dp"
+    android:text="Categoria"
+    android:textSize="24sp"
+    android:textColor="#FF0000"
+    android:background="@drawable/rounded_edittext"
+    android:textStyle="bold"
+    app:layout_constraintTop_toBottomOf="@id/tvLinkFotoAdminIngrediente"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintEnd_toEndOf="parent" />
+
+<ScrollView
+    android:id="@+id/ruedamous2e"
+    android:layout_width="0dp"
+    android:layout_height="100dp"
+    android:layout_marginTop="20dp"
+    android:background="@drawable/rounded_edittext"
+    app:layout_constraintTop_toBottomOf="@id/tvTitleAdminIngredienteCategoria"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintEnd_toEndOf="parent">
+
+    <RadioGroup
+        android:id="@+id/Radio_CategoriaIngredienteAdmin"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+    </RadioGroup>
+
+</ScrollView>
+
+<!-- Register Button -->
+<Button
+    android:id="@+id/btnRegisterAdminIngrediente"
+    android:layout_width="0dp"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="20dp"
+    android:layout_marginHorizontal="30dp"
+    android:text="Registrarse"
+    android:backgroundTint="#FF5722"
+    android:textColor="#FFFFFF"
+    android:textStyle="bold"
+    app:layout_constraintTop_toBottomOf="@id/ruedamous2e"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintEnd_toEndOf="parent" />
+
+<!-- Error Message -->
+<TextView
+    android:id="@+id/tvErrorAdminIngrediente"
+    android:layout_width="0dp"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="10dp"
+    android:layout_marginHorizontal="30dp"
+    android:background="@drawable/error_background"
+    android:padding="12dp"
+    android:text="Credenciales inválidas, por favor intenta nuevamente."
+    android:textSize="14sp"
+    android:textColor="@color/white"
+    android:gravity="center"
+    android:visibility="gone"
+    app:layout_constraintTop_toBottomOf="@id/btnRegisterAdminIngrediente"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintEnd_toEndOf="parent" />
+
+<!-- Retry Button -->
+<Button
+
+
+
+
+    android:id="@+id/btnNuevoIntentoAdminIngrediente"
+    android:layout_width="0dp"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="10dp"
+    android:layout_marginHorizontal="30dp"
+    android:text="@string/intentardenuevo"
+    android:textStyle="bold"
+    android:backgroundTint="@color/primary"
+    android:textColor="@color/white"
+    android:visibility="invisible"
+    android:layout_below="@id/tvErrorAdminIngrediente"
+    app:layout_constraintTop_toBottomOf="@id/tvErrorAdminIngrediente"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintEnd_toEndOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

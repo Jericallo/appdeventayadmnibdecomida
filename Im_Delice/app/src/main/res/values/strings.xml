@@ -1,0 +1,20 @@
+<resources>
+    <string name="app_name">Menus</string>
+    <string name="configuracion">Configuracion</string>
+    <string name="ayuda">ayuda</string>
+    <string name="salir">salir</string>
+    <string name="holamundo">Hola mundo</string>
+    <string name="correo">Correo</string>
+    <string name="contra">contraseña</string>
+    <string name="ingresar">ingresar</string>
+    <string name="intentardenuevo">intenta de nuevo</string>
+    <string name="persona">perfil</string>
+    <string name="correo_pref">correo_pref</string>
+    <string name="contraseña_pref">contraseña_pref</string>
+    <string name="rol_pref">rol_pref</string>
+    <string name="cuentas_pref_compratidas">cuentas_pref_compratidas</string>
+    <string name="btn_regresar_login">Regresar</string>
+    <string name="Dar_bienvenida">Bienvenido:</string>
+
+
+</resources>
